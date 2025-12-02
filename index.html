@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passenger Counter</title>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    backgroundImage: {
-                        'bg-img': "url('station.jpg')"
-                    }
-                }
-            }
-        }
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Passenger Counter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-<body class="bg-bg-img bg-cover bg-center min-h-screen">
+<body>
+    <main class="bg-[url('station.jpg')] bg-cover bg-no-repeat bg-center min-h-screen flex items-center justify-center md:max-w-md md:mx-auto">
+        <section class="flex flex-col items-center gap-10">
+            <h1 class="text-4xl font-bold font-mono mt-10">People entered:</h1>
+            <p id="actual-count" class="text-5xl font-semibold transition-transform hover:scale-150 duration=300">0</p>
+            <button id = "increment-btn" class="bg-gradient-to-b from-teal-100 to-purple-200 py-3 px-10 rounded-xl border-2 border-black hover:bg-gradient-to-t">INCREMENT</button>
+            <button id = "save-count-btn" class="bg-gradient-to-b from-teal-100 to-purple-200 py-3 px-16 rounded-xl border-2 border-black hover:bg-gradient-to-t">SAVE</button>
+            <p class="underline font-semibold italic" id="save-p">Previous entries: </p>
+            <p class="underline font-semibold italic" id="total-p">Total entries: </p>
+            <button id="clear-data-btn" class="bg-gradient-to-b from-teal-100 to-purple-200 py-3 px-12 rounded-xl border-2 border-black hover:bg-gradient-to-t">Clear data</button>
+        </section>
+    </main>
+<script src="script.js"></script>
 </body>
 </html>
